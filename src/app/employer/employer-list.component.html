@@ -1,0 +1,59 @@
+<div class='card'>
+  <div class='card-header'>
+    {{pageTitle}}
+  </div>
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-2'>Filter by:</div>
+      <div class='col-md-4'>
+        <input type='text'
+               [(ngModel)]='listFilter' />
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-6'>
+        <h4>Filtered by: {{listFilter}}</h4>
+      </div>
+    </div>
+    <div class='table-responsive'>
+      <table class='table' *ngIf = 'employers && employers.length'>
+        <thead>
+          <tr>
+            <th>
+              <button class='btn btn-primary'
+                      (click) = 'toggleImage()'
+              >
+              {{showImage ? 'Hide' : 'Show'}}  
+              </button>
+            </th>
+            <th>Name</th>
+            <th>Code</th>            
+            <th>StartDate</th>
+            <th>Total Employees</th>                        
+            <th>Total Revenue</th>                        
+            <th>Rate</th>                                                
+            <th>CountryOfOrigin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let employer of filteredEmployers'>
+            <td>
+                <img *ngIf='showImage'
+                [src]='employer.employerImageUrl'
+                [title]='employer.EmployerName'
+                [style.width.px]='imageWidth'
+                [style.margin.px]='imageMargin'>              
+            </td>
+            <td>{{ employer.employerName | uppercase }}</td>
+            <td>{{ employer.employerCode | lowercase | convertToSpaces: '-' }}</td>            
+            <td>{{ employer.startDate | lowercase }}</td>            
+            <td>{{ employer.employeeCount | number }}</td>                        
+            <td>{{ employer.employerRevenue | currency }}</td>                                                            
+            <td>{{ employer.billingRate | currency }}</td>                                                
+            <td>{{ employer.postalAddressCountry }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
