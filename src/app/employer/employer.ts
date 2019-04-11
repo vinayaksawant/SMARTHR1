@@ -17,5 +17,5 @@ export interface IEmployer {
     employerFax : number;
     originCountryFlagImageUrl : string;
     employerImageUrl : string;
-
+    employerRating : number;
 }
