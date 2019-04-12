@@ -18,7 +18,7 @@ export class AuthService {
     if (!userName || !password) {
       //this.messageService.addMessage('Please enter your userName and password');
       this.message = 'Please enter your userName and password';
-      alert('Please enter your userName and password');
+      //alert('Please enter your userName and password');
 
       return;
     }
@@ -29,7 +29,7 @@ export class AuthService {
         isAdmin: true
       };
       this.message = this.message + 'Admin login';
-      alert('Admin login');      
+      //alert('Admin login');      
       // this.messageService.addMessage('Admin login');
       return;
     }
@@ -39,7 +39,7 @@ export class AuthService {
       isAdmin: false
     };
     this.message = this.message + `User: ${this.currentUser.userName} logged in`;
-    alert(`User: ${this.currentUser.userName} logged in`);          
+    //alert(`User: ${this.currentUser.userName} logged in`);          
     // this.messageService.addMessage(`User: ${this.currentUser.userName} logged in`);
   }
   logout(): void {
