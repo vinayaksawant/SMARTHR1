@@ -2,14 +2,12 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule, ChildrenOutletContexts } from '@angular/router';
 import { EmployerListComponent } from './employer-list.component';
 import { AdminComponent } from './admin.component';
-import { BenefitComponent } from './benefit.component';
 
 const routes: Routes = [
   { path:'' , children:[
-    {path:'employerlist', component:EmployerListComponent},
-    {path:'benefit', component:BenefitComponent}    
-  ]
-  }
+    {path:'employerlist', component:EmployerListComponent}
+    // {path:'benefit', component:BenefitComponent}    
+  ]}
 ];
 
 @NgModule({

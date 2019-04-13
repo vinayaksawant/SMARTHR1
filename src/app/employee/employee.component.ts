@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../user/auth.service';
 
 @Component({
   selector: 'app-employee',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor() { }
+  pageTitle : string= "Just Employee Landing Page"
+  constructor(private authService : AuthService) { }
 
   ngOnInit() {
+  }
+
+  get isLoggedIn(): boolean {
+    return this.authService.isLoggedIn;
   }
 
 }

@@ -4,11 +4,13 @@ import { WelcomeComponent } from './home/welcome.component';
 import { AuthGuard } from './user/auth.guard';
 import { LoginComponent } from './user/login.component';
 import { AdminComponent } from './admin/admin.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 const routes: Routes = [
   {path:'welcome', component: WelcomeComponent, canActivate:[ AuthGuard ]},
   {path:'login', component: LoginComponent},  
   {path:'employer', component: AdminComponent},    
+  {path:'employee', component: EmployeeComponent},      
   {path: '', redirectTo: 'welcome' , pathMatch:'full' } 
 ];
 
