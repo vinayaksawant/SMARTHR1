@@ -2,31 +2,73 @@
     <div class="container-fluid">
       <table width="100%">
         <tr width="100%">
-            <div class="row">
-                <div class="col-xs-6 col-md-4">
-                  <button type="button" class="btn btn-info btn-block" width="100%"
-                  [routerLink]="['/benefit']"
-                  routerLinkActive="active">Benefits</button>                   
+            <div class="form-row align-items-center">
+                <div class="col-xs-6 col-sm-4" style="align-content :center">
+                    <div>
+                      <select class="custom-select mr-sm-1" id="employer">
+                          <option selected>Select Employer..</option>                        
+                          <option value="1">jupiter worldwide</option>
+                          <option value="2">neptune enterprises</option>
+                          <option value="3">venus industries</option>
+                          <option value="4">mars textiles</option>                        
+                      </select>
+                  </div>
+                </div>              
+                <div class=".col-xs-6 .col-sm-4 " style="align-content :center">
+                    <div>
+                        Quick Search Member: 
+                    </div>                  
                 </div>
-                <div class="col-xs-6 col-md-4">
-                    <button type="button" class="btn btn-info btn-block" width="100%"
-                    [routerLink]="['/lifeevent']"
-                    routerLinkActive="active">Events</button>
+                <div class=".col-xs-6 .col-sm-4 " style="align-content :center">
+                    <div>
+                        <input type="text">
+                    </div>                                    
                 </div>
-                <div class="col-xs-6 col-md-4">
-                    <button type="button" class="btn btn-info btn-block" width="100%"
-                    [routerLink]="['/dependent']"
-                    routerLinkActive="active">Dependent(beneficiaries)</button>
+                <div class=".col-xs-6 .col-sm-4" style="align-content :center">
+                    <button type="button" class="btn btn-info" style="width:80px">Search</button>
+                    &nbsp;
+                    <button type="button" class="btn btn-info" style="width:100px">Add new</button>                    
                 </div>
               </div>
         </tr>
         <tr width="100%">
           <td>
               <div class="text-center">
-                  <img src="./assets/images/employeelandingpage515.gif"
-                       class="img-responsive center-block"
-                       style="width:100%; max-height:525px;padding-bottom:1px" />
-                </div>            
+                <table>
+                  <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Details</td>                                        
+                  </tr>
+                  <tr>
+                    <td>jhon</td>
+                    <td>smith</td>
+                    <td>
+                      <a class="nav-link"
+                      [routerLink]="['/employeedetail']"
+                      routerLinkActive="active">details</a>
+                    </td>                
+                  </tr>
+                  <tr> 
+                      <td>wacky</td>
+                      <td>spoon</td>
+                      <td>
+                          <a class="nav-link"
+                          [routerLink]="['/employeedetail']"
+                          routerLinkActive="active">details</a>
+                        </td>
+                  </tr>
+                  <tr>          
+                      <td>curved</td>
+                      <td>bowl</td>
+                      <td>
+                          <a class="nav-link"
+                          [routerLink]="['/employeedetail']"
+                          routerLinkActive="active">details</a>
+                        </td>
+                  </tr>                                      
+                </table>
+              </div>
           </td>
         </tr>        
       </table>
