@@ -3,10 +3,10 @@ import { AuthService } from '../user/auth.service';
 
 @Component({
   selector: 'app-employer',
-  templateUrl: './employer.component.html',
-  styleUrls: ['./employer.component.css']
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.css']
 })
-export class EmployerComponent implements OnInit {
+export class AdminComponent implements OnInit {
 
   pageTitle : string= "Just Admin Landing Page"
   constructor(private authService : AuthService) { }
